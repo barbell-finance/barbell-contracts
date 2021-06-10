@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: BUSL-1.1
 pragma solidity >=0.8.0;
 
 import "./IERC20.sol";
@@ -6,7 +7,7 @@ import "./ISwapRouter.sol";
 import "./IGridFactory.sol";
 
 interface IGridPair {
-    event Deposit (address indexed addr, uint256 t, uint256 u, uint256 newS);
+    event Deposit (address indexed addr, uint256 t, uint256 u, uint256 newS, uint256 balancedT, uint256 balancedU);
     event Withdraw(address indexed addr, uint256 t, uint256 u, uint256 newS);
     event Buy (uint256 t, uint256 u, uint256 minT, uint256 maxU);
     event Sell(uint256 t, uint256 u, uint256 maxT, uint256 minU);
