@@ -38,6 +38,7 @@ contract FixedRateGrid is IGridPair, BaseGrid {
         return swapStack.length;
     }
     function getSwapStackElem(uint256 i) public view returns (Swap memory) {
+        require(i < swapStack.length, "FRG: Stack Overflow");
         return swapStack[i];
     }
 
